@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import "./index.css";
 
+import SobreMi from "./components/SobreMi";
+import Catalogo from "./components/Catalogo";
+import Galeria from "./components/Galeria";
+import Testimonios from "./components/Testimonios";
+import Footer from "./components/Footer";
+import WhatsappButton from "./components/WhatsappButton";
+
 // Importar imágenes
 import Torta1 from "./assets/Torta1.jpg";
 import Torta2 from "./assets/Torta2.jpg";
@@ -9,9 +16,47 @@ import Budin1 from "./assets/Budin1.jpg";
 import Budin2 from "./assets/Budin2.jpg";
 import Budin3 from "./assets/Budin3.jpg";
 
+function Calculadora() {
+  const [precio, setPrecio] = useState("");
+  const [resultado, setResultado] = useState("");
+
+  const calcular = () => {
+    if (precio === "" || isNaN(precio)) {
+      setResultado("Ingresá un número válido");
+      return;
+    }
+
+    const precioNum = parseFloat(precio);
+    const costoFinal = precioNum * 1.35 + 1500;
+
+    setResultado(`Costo final estimado: $${costoFinal.toFixed(2)}`);
+  };
+
+  return (
+    <div className="calc-box">
+      <input
+        type="number"
+        placeholder="Precio base"
+        value={precio}
+        onChange={(e) => setPrecio(e.target.value)}
+      />
+
+      <button onClick={calcular}>Calcular</button>
+
+      {resultado && <p className="resultado">{resultado}</p>}
+    </div>
+  );
+}
+
 function App() {
   return (
     <div>
+      <SobreMi />
+      <Catalogo />
+      <Galeria />
+      <Testimonios />
+      <Footer />
+      <WhatsappButton />
 
       {/* HEADER */}
       <header className="header">
@@ -35,7 +80,6 @@ function App() {
       <section id="productos" className="productos">
         <h2>Nuestros Productos</h2>
         <div className="grid">
-
           <div className="card">
             <img src={Torta1} alt="Torta 1" />
             <h3>Torta Chocolate</h3>
@@ -71,7 +115,6 @@ function App() {
             <h3>Budín Frutal</h3>
             <p className="precio">$1300</p>
           </div>
-
         </div>
       </section>
 
@@ -90,49 +133,15 @@ function App() {
         <Calculadora />
       </section>
 
-      {/* FOOTER */}
+      {/* FOOTER CONTACTO */}
       <footer id="contacto" className="footer">
         <h3>Contacto</h3>
         <p>Instagram: @carcakes</p>
         <p>Teléfono: 11-1234-5678</p>
         <p>Buenos Aires, Argentina</p>
       </footer>
-
     </div>
   );
 }
 
-// COMPONENTE CALCULADORA
-function Calculadora() {
-  const [precio, setPrecio] = useState("");
-  const [resultado, setResultado] = useState("");
-
-  const calcular = () => {
-    if (precio === "" || isNaN(precio)) {
-      setResultado("Ingresá un número válido");
-      return;
-    }
-
-    const precioNum = parseFloat(precio);
-    const costoFinal = precioNum * 1.35 + 1500;
-
-    setResultado(`Costo final estimado: $${costoFinal.toFixed(2)}`);
-  };
-
-  return (
-    <div className="calc-box">
-      <input
-        type="number"
-        placeholder="Precio base"
-        value={precio}
-        onChange={(e) => setPrecio(e.target.value)}
-      />
-
-      <button onClick={calcular}>Calcular</button>
-
-      {resultado && <p className="resultado">{resultado}</p>}
-    </div>
-  );
-}
-
-export default App;
+export default App; (will be filled in next update)

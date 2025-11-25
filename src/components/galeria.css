@@ -1,0 +1,16 @@
+.galeria-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.masonry {
+  column-count: 3;
+  column-gap: 15px;
+}
+
+.masonry img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  break-inside: avoid;
+}
