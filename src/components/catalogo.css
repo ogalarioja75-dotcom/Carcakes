@@ -5,7 +5,7 @@
 
 .catalogo-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
 
@@ -19,28 +19,12 @@
 
 .card img {
   width: 100%;
-  height: 140px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.card h3 {
-  margin: 10px 0 5px;
-}
-
 .card p {
   color: #ff5e8c;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .catalogo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .catalogo-grid {
-    grid-template-columns: 1fr;
-  }
+  font-weight: bold;
 }

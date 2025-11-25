@@ -2,7 +2,7 @@ import './sobremi.css';
 
 export default function SobreMi() {
   return (
-    <section className="sobre-mi-container">
+    <section className="sobre-mi-container" id="nosotros">
       <h2>Sobre Carcakes</h2>
       <p>
         Carcakes nace de la pasión por la pastelería casera, combinando sabores

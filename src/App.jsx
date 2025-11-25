@@ -49,18 +49,9 @@ function Calculadora() {
 function App() {
   return (
     <div>
-      <SobreMi />
-      <Catalogo />
-      <Galeria />
-      <Testimonios />
-      <Footer />
-      <WhatsappButton />
-
-      {/* HEADER */}
       <header className="header">
         <h1 className="logo">Carcakes</h1>
 
-        {/* Botón hamburguesa */}
         <div
           className="hamburger"
           onClick={() => {
@@ -82,76 +73,30 @@ function App() {
         </nav>
       </header>
 
-      {/* HERO */}
       <section className="hero">
         <h2>Pastelería Artesanal</h2>
         <p>Sabores caseros, hechos con pasión.</p>
       </section>
 
-      {/* PRODUCTOS */}
-      <section id="productos" className="productos">
-        <h2>Nuestros Productos</h2>
-        <div className="grid">
-          <div className="card">
-            <img src={Torta1} alt="Torta 1" />
-            <h3>Torta Chocolate</h3>
-            <p className="precio">$3500</p>
-          </div>
+      <SobreMi />
+      <Catalogo />
+      <Galeria />
+      <Testimonios />
 
-          <div className="card">
-            <img src={Torta2} alt="Torta 2" />
-            <h3>Torta Vainilla</h3>
-            <p className="precio">$3300</p>
-          </div>
-
-          <div className="card">
-            <img src={Torta3} alt="Torta 3" />
-            <h3>Torta Frutal</h3>
-            <p className="precio">$3600</p>
-          </div>
-
-          <div className="card">
-            <img src={Budin1} alt="Budín 1" />
-            <h3>Budín Chocolate</h3>
-            <p className="precio">$1200</p>
-          </div>
-
-          <div className="card">
-            <img src={Budin2} alt="Budín 2" />
-            <h3>Budín Vainilla</h3>
-            <p className="precio">$1100</p>
-          </div>
-
-          <div className="card">
-            <img src={Budin3} alt="Budín 3" />
-            <h3>Budín Frutal</h3>
-            <p className="precio">$1300</p>
-          </div>
-        </div>
-      </section>
-
-      {/* SOBRE NOSOTROS */}
-      <section id="nosotros" className="nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>
-          En Carcakes elaboramos productos artesanales con ingredientes frescos,
-          recetas familiares y mucho cariño. Cada pedido es único y especial.
-        </p>
-      </section>
-
-      {/* CALCULADORA */}
       <section id="calculadora" className="calculadora">
         <h2>Calculadora de Costos</h2>
         <Calculadora />
       </section>
 
-      {/* FOOTER CONTACTO */}
-      <footer id="contacto" className="footer">
+      <footer id="contacto" className="footer-contacto">
         <h3>Contacto</h3>
         <p>Instagram: @carcakes</p>
         <p>Teléfono: 11-1234-5678</p>
         <p>Buenos Aires, Argentina</p>
       </footer>
+
+      <Footer />
+      <WhatsappButton />
     </div>
   );
 }

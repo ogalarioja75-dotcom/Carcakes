@@ -24,6 +24,49 @@
     display: none;
     flex-direction: column;
     text-align: center;
+    padding: 15px 0;
+  }
+
+  .header nav.active {
+    display: flex;
+  }
+
+  .header nav a {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+/* HAMBURGUESA */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* MEDIA QUERY PARA CELULARES */
+@media (max-width: 768px) {
+  .header nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #ffb3c6;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
   }
 
   .header nav.active {
