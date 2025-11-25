@@ -51,20 +51,14 @@ function Calculadora() {
 function App() {
   return (
     <div>
-      <SobreMi />
-      <Catalogo />
-      <Galeria />
-      <Testimonios />
-      <Footer />
-      <WhatsappButton />
 
       {/* HEADER */}
       <header className="header">
         <h1 className="logo">Carcakes</h1>
         <nav>
           <a href="#">Inicio</a>
-          <a href="#productos">Productos</a>
-          <a href="#nosotros">Nosotros</a>
+          <a href="#catalogo">Productos</a>
+          <a href="#sobre-mi">Nosotros</a>
           <a href="#calculadora">Calculadora</a>
           <a href="#contacto">Contacto</a>
         </nav>
@@ -76,7 +70,27 @@ function App() {
         <p>Sabores caseros, hechos con pasión.</p>
       </section>
 
-      {/* PRODUCTOS */}
+      {/* CATALOGO */}
+      <section id="catalogo">
+        <Catalogo />
+      </section>
+
+      {/* SOBRE MI */}
+      <section id="sobre-mi">
+        <SobreMi />
+      </section>
+
+      {/* GALERIA */}
+      <section id="galeria">
+        <Galeria />
+      </section>
+
+      {/* TESTIMONIOS */}
+      <section id="testimonios">
+        <Testimonios />
+      </section>
+
+      {/* PRODUCTOS (IMÁGENES) */}
       <section id="productos" className="productos">
         <h2>Nuestros Productos</h2>
         <div className="grid">
@@ -118,15 +132,6 @@ function App() {
         </div>
       </section>
 
-      {/* SOBRE NOSOTROS */}
-      <section id="nosotros" className="nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>
-          En Carcakes elaboramos productos artesanales con ingredientes frescos,
-          recetas familiares y mucho cariño. Cada pedido es único y especial.
-        </p>
-      </section>
-
       {/* CALCULADORA */}
       <section id="calculadora" className="calculadora">
         <h2>Calculadora de Costos</h2>
@@ -140,8 +145,10 @@ function App() {
         <p>Teléfono: 11-1234-5678</p>
         <p>Buenos Aires, Argentina</p>
       </footer>
+
+      <WhatsappButton />
     </div>
   );
 }
 
-export default App; (will be filled in next update)
+export default App;
