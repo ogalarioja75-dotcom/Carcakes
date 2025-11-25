@@ -11,6 +11,18 @@
 .masonry img {
   width: 100%;
   margin-bottom: 15px;
-  border-radius: 12px;
-  break-inside: avoid;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry {
+    column-count: 1;
+  }
 }
